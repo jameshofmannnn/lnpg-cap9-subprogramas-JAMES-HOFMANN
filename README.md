@@ -216,7 +216,7 @@ Por isso:
 Objetivo
 Criar um sistema simples de agenda utilizando subprogramas.
 
----
+
 
 Diagrama simples das chamadas
 
@@ -228,9 +228,8 @@ main()
  │     ├── atualizarContato()
  │     └── removerContato()
 
----
 
----
+
 Justificativa da divisão dos subprogramas
 
 O programa foi dividido em funções menores para:
@@ -241,7 +240,6 @@ O programa foi dividido em funções menores para:
 
 Cada função possui apenas uma responsabilidade.
 
----
 
 Dificuldades encontradas
 
@@ -250,7 +248,7 @@ Dificuldades encontradas
 - Organizar responsabilidades do programa;
 - Reutilizar funções corretamente.
 
----
+
 
 Vantagens da modularização
 
