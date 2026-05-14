@@ -1,0 +1,187 @@
+# Versão do Programa em um único main
+
+public class ControleAcademico {
+
+    public static void main(String[] args) {
+
+        String[] alunos = new String[5];
+        double[][] notas = new double[5][3];
+        double[] medias = new double[5];
+        String[] situacoes = new String[5];
+
+        java.util.Scanner entrada = new java.util.Scanner(System.in);
+
+        // Ler alunos e notas
+        for (int i = 0; i < 5; i++) {
+
+            System.out.println("\nAluno " + (i + 1));
+
+            System.out.print("Nome: ");
+            alunos[i] = entrada.nextLine();
+
+            double soma = 0;
+
+            for (int j = 0; j < 3; j++) {
+
+                System.out.print("Nota " + (j + 1) + ": ");
+                notas[i][j] = entrada.nextDouble();
+
+                soma += notas[i][j];
+            }
+
+            entrada.nextLine();
+
+            medias[i] = soma / 3;
+
+            // Determinar situação
+            if (medias[i] >= 7) {
+                situacoes[i] = "Aprovado";
+            }
+            else if (medias[i] >= 5) {
+                situacoes[i] = "Recuperação";
+            }
+            else {
+                situacoes[i] = "Reprovado";
+            }
+        }
+
+        // Relatório final
+        System.out.println("\n===== RELATÓRIO FINAL =====");
+
+        for (int i = 0; i < 5; i++) {
+
+            System.out.println("\nAluno: " + alunos[i]);
+
+            System.out.println("Notas:");
+            for (int j = 0; j < 3; j++) {
+                System.out.println("Nota " + (j + 1) + ": " + notas[i][j]);
+            }
+
+            System.out.println("Média: " + medias[i]);
+            System.out.println("Situação: " + situacoes[i]);
+        }
+
+        entrada.close();
+    }
+}
+
+
+
+#Versãp do Programa modularizado
+
+import java.util.Scanner;
+
+public class ControleAcademico {
+
+    static Scanner entrada = new Scanner(System.in);
+
+    // 1) Ler aluno
+    public static String lerAluno() {
+
+        System.out.print("Nome do aluno: ");
+        return entrada.nextLine();
+    }
+
+
+    // 2) Ler notas
+    public static double[] lerNotas() {
+
+        double[] notas = new double[3];
+
+        for (int i = 0; i < 3; i++) {
+
+            System.out.print("Nota " + (i + 1) + ": ");
+            notas[i] = entrada.nextDouble();
+        }
+
+        entrada.nextLine();
+
+        return notas;
+    }
+
+
+    // 3) Calcular média
+    public static double calcularMedia(double[] notas) {
+
+        double soma = 0;
+
+        for (int i = 0; i < notas.length; i++) {
+            soma += notas[i];
+        }
+
+        return soma / notas.length;
+    }
+
+
+    // 4) Determinar situação
+    public static String determinarSituacao(double media) {
+
+        if (media >= 7) {
+            return "Aprovado";
+        }
+        else if (media >= 5) {
+            return "Recuperação";
+        }
+        else {
+            return "Reprovado";
+        }
+    }
+
+
+    // 5) Imprimir relatório
+    public static void imprimirRelatorio(
+            String[] alunos,
+            double[][] notas,
+            double[] medias,
+            String[] situacoes
+    ) {
+
+        System.out.println("\n===== RELATÓRIO FINAL =====");
+
+        for (int i = 0; i < alunos.length; i++) {
+
+            System.out.println("\nAluno: " + alunos[i]);
+
+            for (int j = 0; j < notas[i].length; j++) {
+                System.out.println(
+                        "Nota " + (j + 1) + ": " + notas[i][j]
+                );
+            }
+
+            System.out.println("Média: " + medias[i]);
+            System.out.println("Situação: " + situacoes[i]);
+        }
+    }
+
+
+    // Programa principal
+    public static void main(String[] args) {
+
+        String[] alunos = new String[5];
+        double[][] notas = new double[5][3];
+        double[] medias = new double[5];
+        String[] situacoes = new String[5];
+
+        for (int i = 0; i < 5; i++) {
+
+            System.out.println("\n===== ALUNO " + (i + 1) + " =====");
+
+            alunos[i] = lerAluno();
+
+            notas[i] = lerNotas();
+
+            medias[i] = calcularMedia(notas[i]);
+
+            situacoes[i] = determinarSituacao(medias[i]);
+        }
+
+        imprimirRelatorio(
+                alunos,
+                notas,
+                medias,
+                situacoes
+        );
+
+        entrada.close();
+    }
+}

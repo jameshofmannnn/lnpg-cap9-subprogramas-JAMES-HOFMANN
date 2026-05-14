@@ -1,0 +1,112 @@
+# Agenda Simples de Contatos
+
+contatos = []
+
+
+def mostrar_menu():
+    print("\n===== AGENDA =====")
+    print("1 - Adicionar contato")
+    print("2 - Listar contatos")
+    print("3 - Buscar contato")
+    print("4 - Atualizar contato")
+    print("5 - Remover contato")
+    print("0 - Sair")
+
+
+def adicionar_contato(lista):
+    nome = input("Nome: ")
+    telefone = input("Telefone: ")
+
+    contato = {
+        "nome": nome,
+        "telefone": telefone
+    }
+
+    lista.append(contato)
+
+    print("Contato adicionado com sucesso!")
+
+
+def listar_contatos(lista):
+    if len(lista) == 0:
+        print("Nenhum contato cadastrado.")
+        return
+
+    print("\n--- CONTATOS ---")
+
+    for i, contato in enumerate(lista):
+        print(f"{i} - {contato['nome']} | {contato['telefone']}")
+
+
+def buscar_contato(lista, nome):
+    for contato in lista:
+        if contato["nome"].lower() == nome.lower():
+            return contato
+
+    return None
+
+
+def atualizar_contato(lista):
+    nome = input("Digite o nome do contato: ")
+
+    contato = buscar_contato(lista, nome)
+
+    if contato is not None:
+        novo_telefone = input("Novo telefone: ")
+        contato["telefone"] = novo_telefone
+
+        print("Contato atualizado!")
+    else:
+        print("Contato não encontrado.")
+
+
+def remover_contato(lista, nome):
+    for contato in lista:
+        if contato["nome"].lower() == nome.lower():
+            lista.remove(contato)
+            return True
+
+    return False
+
+
+while True:
+    mostrar_menu()
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        adicionar_contato(contatos)
+
+    elif opcao == "2":
+        listar_contatos(contatos)
+
+    elif opcao == "3":
+        nome = input("Nome para buscar: ")
+
+        contato = buscar_contato(contatos, nome)
+
+        if contato is not None:
+            print("Contato encontrado:")
+            print(contato["nome"], "-", contato["telefone"])
+        else:
+            print("Contato não encontrado.")
+
+    elif opcao == "4":
+        atualizar_contato(contatos)
+
+    elif opcao == "5":
+        nome = input("Nome para remover: ")
+
+        removido = remover_contato(contatos, nome)
+
+        if removido:
+            print("Contato removido!")
+        else:
+            print("Contato não encontrado.")
+
+    elif opcao == "0":
+        print("Programa encerrado.")
+        break
+
+    else:
+        print("Opção inválida.")
