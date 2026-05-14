@@ -6,59 +6,58 @@ LNPG-BSI-2026.1
 
 
 ### Tarefa 1 — Modularização em Java
-Objetivo: Dividir um programa grande em subprogramas.
 
-O porquê da modulação utilizada
+O objetivo da atividade foi desenvolver um sistema de controle acadêmico em Java utilizando subprogramas.
 
----
-lerAluno()
-
-Responsável apenas por ler o nome.
-
-public static String lerAluno()
-
-Retorna uma String.
+O sistema:
+- lê o nome de 5 alunos;
+- lê 3 notas para cada aluno;
+- calcula a média;
+- determina a situação do aluno;
+- exibe um relatório final.
 
 ---
 
-lerNotas()
+Versão Monolítica:
 
-Responsável apenas por ler as notas.
+Na primeira versão, todo o sistema foi desenvolvido dentro do método main.
 
-public static double[] lerNotas()
+Características:
+- código concentrado em um único bloco;
+- pouca separação de responsabilidades;
+- maior repetição de lógica;
+- difícil manutenção.
 
-Retorna um vetor de notas.
+Versão Modularizada:
 
----
+Na segunda versão, o sistema foi dividido em subprogramas.
 
-calcularMedia()
-
-Recebe notas por parâmetro.
-
-calcularMedia(double[] notas)
-
-Retorna a média.
----
+Métodos criados:
+- lerAluno() # Responsável apenas por ler o nome. Retorna uma String.
+- lerNotas() # Responsável apenas por ler as notas. Retorna um vetor de notas.
+- calcularMedia() # Recebe notas por parâmetro. Retorna a média.
+- determinarSituacao() #Recebe a média e retorna a situação do aluno.
+- imprimirRelatorio() # Responsável apenas pela saída final do sistema.
 
 
+Objetivo da modularização:
+- melhorar organização;
+- facilitar manutenção;
+- evitar repetição de código;
+- aumentar legibilidade.
 
-determinarSituacao()
+-----------------
 
-Recebe a média e retorna a situação do aluno.
 
-determinarSituacao(double media)
-
----
-
-imprimirRelatorio()
-
-Responsável apenas pela saída final do sistema.
 
 
 
 
 -----------------
-Agenda de Contatos
+
+
+
+### Projeto Livre: Agenda de Contatos Simples
 
 Objetivo
 Criar um sistema simples de agenda utilizando subprogramas.
