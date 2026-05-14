@@ -3,16 +3,17 @@
 
 print("===== SISTEMA DE VENDAS =====")
 
+
 produto = input("Produto: ")
 
 quantidade = int(input("Quantidade: "))
 
 preco_unitario = float(input("Preço unitário: R$ "))
 
-# Calcular subtotal
+
 subtotal = quantidade * preco_unitario
 
-# Calcular desconto
+
 if subtotal > 500:
     desconto = subtotal * 0.10
 elif subtotal > 200:
@@ -20,10 +21,10 @@ elif subtotal > 200:
 else:
     desconto = 0
 
-# Calcular total final
 total = subtotal - desconto
 
-# Imprimir cupom
+
+
 print("\n===== CUPOM =====")
 
 print("Produto:", produto)
@@ -39,34 +40,30 @@ print("Desconto: R$", desconto)
 print("Total final: R$", total)
 
 
+
 # Versão Modularizado do Sistemas de Vendas
 
 
-# 1) Ler produto
 def ler_produto():
     produto = input("Produto: ")
     return produto
 
 
-# 2) Ler quantidade
 def ler_quantidade():
     quantidade = int(input("Quantidade: "))
     return quantidade
 
 
-# 3) Ler preço
 def ler_preco():
     preco = float(input("Preço unitário: R$ "))
     return preco
 
 
-# 4) Calcular subtotal
 def calcular_subtotal(quantidade, preco):
     subtotal = quantidade * preco
     return subtotal
 
 
-# 5) Calcular desconto
 def calcular_desconto(subtotal):
 
     if subtotal > 500:
@@ -79,13 +76,12 @@ def calcular_desconto(subtotal):
         return 0
 
 
-# 6) Calcular total final
+
 def calcular_total(subtotal, desconto):
     total = subtotal - desconto
     return total
 
 
-# 7) Imprimir cupom
 def imprimir_cupom(
         produto,
         quantidade,
@@ -110,7 +106,8 @@ def imprimir_cupom(
     print("Total final: R$", total)
 
 
-# Programa principal
+
+
 
 print("===== SISTEMA DE VENDAS =====")
 
@@ -134,3 +131,4 @@ imprimir_cupom(
     desconto,
     total
 )
+

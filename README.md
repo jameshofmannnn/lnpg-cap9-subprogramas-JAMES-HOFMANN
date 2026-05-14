@@ -48,14 +48,81 @@ Objetivo da modularização:
 
 -----------------
 
+# Tarefa 2: Sistema de Vendas
+
+Objetivo
+
+Desenvolver um sistema de vendas em Python utilizando modularização e funções.
+
+---
+
+Versão monolítica
+
+A primeira versão foi criada utilizando apenas um bloco principal.
+
+Problemas encontrados:
+- código grande;
+- pouca organização;
+- difícil manutenção;
+- responsabilidades misturadas.
+
+---
+
+Versão modularizada
+
+Na segunda versão, o sistema foi dividido em funções menores.
+
+Funções criadas:
+- ler_produto()
+- ler_quantidade()
+- ler_preco()
+- calcular_subtotal()
+- calcular_desconto()
+- calcular_total()
+- imprimir_cupom()
+
+---
+
+Partes repetitivas
+
+As partes relacionadas aos cálculos e impressão poderiam gerar repetição caso o sistema aumentasse.
+
+A modularização ajudou a separar essas responsabilidades.
+
+---
+
+Partes mais reutilizáveis
+
+As funções de cálculo ficaram reutilizáveis:
+- calcular_subtotal()
+- calcular_desconto()
+- calcular_total()
 
 
+---
 
+Impacto da modularização na legibilidade
 
+A modularização melhorou:
+- organização do código;
+- clareza do fluxo;
+- entendimento das responsabilidades;
+- facilidade de manutenção.
+
+O programa ficou mais simples de ler e compreender.
 
 -----------------
 
 
+
+
+
+
+
+
+
+
+------------------
 
 ### Projeto Livre: Agenda de Contatos Simples
 
