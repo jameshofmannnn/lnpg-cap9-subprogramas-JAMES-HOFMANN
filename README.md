@@ -204,9 +204,45 @@ Por isso:
 
 --------------------
 
+# Tarefa 4 — Objetos e Referência em Java
+
+Objetivo:
+
+Compreender o comportamento de objetos em chamadas de métodos em Java.
 
 
 
+Java possui passagem por referência verdadeira?
+
+Não. Java sempre utiliza passagem por valor.
+
+
+
+O que é copiado na chamada?
+
+No caso de objetos, o valor copiado é a referência do objeto.
+
+Isso significa que o método recebe uma cópia da referência que aponta para o objeto original.
+
+
+
+Por que alterações no objeto permanecem?
+
+As alterações permanecem porque:
+- o parâmetro do método;
+- e a variável original;
+
+apontam para o mesmo objeto na memória.
+
+
+Quando o método altera:
+
+p.preco = p.preco - 50;
+
+o objeto original também é modificado.
+
+
+Assim, aprendi que Java sempre usa passagem por valor e que em objetos, a referência é copiada. As alterações no objeto permanecem após a chamada do método.
 
 
 ------------------
