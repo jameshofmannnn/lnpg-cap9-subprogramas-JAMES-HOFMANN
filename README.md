@@ -268,28 +268,14 @@ main()
 
 Justificativa da divisão dos subprogramas
 
-O programa foi dividido em funções menores para:
-- melhorar organização;
-- facilitar manutenção;
-- evitar repetição de código;
-- melhorar legibilidade.
-
-Cada função possui apenas uma responsabilidade.
-
+O programa foi dividido em funções menores para deixar o código mais organizado e menos confuso. Em vez de fazer tudo em um único bloco grande, cada função ficou responsável por uma parte específica do sistema, como adicionar contatos, buscar informações ou mostrar os dados na tela, tudo isso de forma bem organizada, o que ajuda muito no entendimento do código, especialmente para quem está começando ou não tem muita experiência. Dessa forma, ficou mais fácil entender o que cada parte do programa faz e também mais simples de mexer no código caso seja necessário fazer alguma alteração depois.
 
 Dificuldades encontradas
 
-- Entender passagem de parâmetros;
-- Trabalhar com retorno de funções;
-- Organizar responsabilidades do programa;
-- Reutilizar funções corretamente.
-
-
+Uma das maiores dificuldades foi entender melhor como os parâmetros funcionam nas funções e como retornar valores corretamente. Essa parte precisa de muita atenção e fazer muuuitos testes. Também foi um pouco complicado decidir o que cada função deveria fazer, principalmente para evitar repetir código. Em alguns momentos foi necessário organizar várias vezes partes do programa para deixar as funções mais separadas e com tarefas mais claras. Dá mais trabalho, mas compensa com código mais claro de entender.
 
 Vantagens da modularização
 
-- Código mais organizado;
-- Mais fácil de entender;
-- Facilita manutenção;
-- Permite reutilização;
-- Reduz repetição de código.
+Depois de dividir o programa em funções, o código ficou muito mais organizado e fácil de entender. Também ficou mais simples encontrar erros e fazer alterações sem precisar mexer em todo o sistema. Outro ponto positivo foi a reutilização de funções, já que algumas partes do código puderam ser usadas várias vezes sem precisar escrever tudo novamente. Isso ajudou a reduzir repetição e deixou o programa mais limpo.
+
+Dessa forma, aprendi que enquanto estudante de programação tenho que me preocupar com a clareza do código para que futuramente eu ainda continue entendendo cada parte dele. E quando utilizo a modulação o processo fica mais transparente e mais simples de entender. Mas vi que é mais trabalho porque tenho que organizar o código e deixar ele enxuto. É preciso mais lógica e atenção, especialmente fazer mais testes para testar se as funções estão sendo chamadas e retornando valores corretamente. Achei uma experiência legal em fazer a comparação entre o código em bloco completo e o código com modularização.
