@@ -11,7 +11,7 @@ public class ControleAcademico {
 
         java.util.Scanner entrada = new java.util.Scanner(System.in);
 
-        // Ler alunos e notas
+
         for (int i = 0; i < 5; i++) {
 
             System.out.println("\nAluno " + (i + 1));
@@ -33,7 +33,7 @@ public class ControleAcademico {
 
             medias[i] = soma / 3;
 
-            // Determinar situação
+
             if (medias[i] >= 7) {
                 situacoes[i] = "Aprovado";
             }
@@ -45,7 +45,7 @@ public class ControleAcademico {
             }
         }
 
-        // Relatório final
+
         System.out.println("\n===== RELATÓRIO FINAL =====");
 
         for (int i = 0; i < 5; i++) {
@@ -76,7 +76,7 @@ public class ControleAcademico {
 
     static Scanner entrada = new Scanner(System.in);
 
-    // 1) Ler aluno
+
     public static String lerAluno() {
 
         System.out.print("Nome do aluno: ");
@@ -84,7 +84,7 @@ public class ControleAcademico {
     }
 
 
-    // 2) Ler notas
+
     public static double[] lerNotas() {
 
         double[] notas = new double[3];
@@ -101,7 +101,7 @@ public class ControleAcademico {
     }
 
 
-    // 3) Calcular média
+
     public static double calcularMedia(double[] notas) {
 
         double soma = 0;
@@ -114,7 +114,7 @@ public class ControleAcademico {
     }
 
 
-    // 4) Determinar situação
+
     public static String determinarSituacao(double media) {
 
         if (media >= 7) {
@@ -129,7 +129,7 @@ public class ControleAcademico {
     }
 
 
-    // 5) Imprimir relatório
+
     public static void imprimirRelatorio(
             String[] alunos,
             double[][] notas,
@@ -155,7 +155,7 @@ public class ControleAcademico {
     }
 
 
-    // Programa principal
+
     public static void main(String[] args) {
 
         String[] alunos = new String[5];
