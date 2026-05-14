@@ -48,6 +48,8 @@ Objetivo da modularização:
 
 -----------------
 
+
+
 # Tarefa 2: Sistema de Vendas
 
 Objetivo
@@ -112,6 +114,8 @@ A modularização melhorou:
 O programa ficou mais simples de ler e compreender.
 
 -----------------
+
+
 
 # Tarefa 3 — Passagem de Parâmetros por Valor em Java
 
@@ -207,7 +211,7 @@ Por isso:
 
 ------------------
 
-### Projeto Livre: Agenda de Contatos Simples
+# Projeto Livre: Agenda de Contatos Simples
 
 Objetivo
 Criar um sistema simples de agenda utilizando subprogramas.
