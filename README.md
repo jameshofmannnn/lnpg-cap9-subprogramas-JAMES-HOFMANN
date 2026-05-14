@@ -16,7 +16,7 @@ O sistema:
 - determina a situação do aluno;
 - exibe um relatório final.
 
----
+
 
 Versão Monolítica:
 
@@ -56,7 +56,7 @@ Objetivo
 
 Desenvolver um sistema de vendas em Python utilizando modularização e funções.
 
----
+
 
 Versão monolítica
 
@@ -68,7 +68,7 @@ Problemas encontrados:
 - difícil manutenção;
 - responsabilidades misturadas.
 
----
+
 
 Versão modularizada
 
@@ -83,7 +83,7 @@ Funções criadas:
 - calcular_total()
 - imprimir_cupom()
 
----
+
 
 Partes repetitivas
 
@@ -91,7 +91,7 @@ As partes relacionadas aos cálculos e impressão poderiam gerar repetição cas
 
 A modularização ajudou a separar essas responsabilidades.
 
----
+
 
 Partes mais reutilizáveis
 
@@ -101,7 +101,7 @@ As funções de cálculo ficaram reutilizáveis:
 - calcular_total()
 
 
----
+
 
 Impacto da modularização na legibilidade
 
