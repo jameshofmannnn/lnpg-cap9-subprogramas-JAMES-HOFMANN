@@ -113,9 +113,92 @@ O programa ficou mais simples de ler e compreender.
 
 -----------------
 
+# Tarefa 3 — Passagem de Parâmetros por Valor em Java
+
+Objetivo:
+
+Compreender como funciona a passagem de parâmetros por valor em Java utilizando tipos primitivos.
+
+
+Por que o valor original não mudou?
+
+O valor original não mudou porque o método recebeu apenas uma cópia do valor da variável.
+
+
+No programa, a variável original é:
+
+int numero = 10;
 
 
 
+Quando ela foi enviada para o método:
+
+alterarNumero(numero);
+
+o Java copiou o valor 10 para a variável local x.
+
+
+Dentro do método:
+
+x = 100;
+
+somente a cópia foi alterada.
+
+A variável numero do main continuou armazenando o valor original.
+
+
+O que significa “passagem por valor”?
+
+Passagem por valor significa que o método recebe uma cópia do valor da variável.
+
+Em tipos primitivos do Java:
+
+int
+double
+char
+boolean
+
+o valor é copiado para o parâmetro do método.
+
+Isso significa que:
+- alterações feitas dentro do método;
+- não modificam a variável original.
+
+
+Qual valor realmente foi copiado?
+
+O valor copiado foi 10. Esse valor saiu da variável numero e foi copiado para x.
+
+
+Mudança local
+
+A mudança aconteceu apenas dentro do método:
+
+x = 100;
+
+O valor de x mudou localmente para 100.
+
+
+Ausência de mudança externa
+
+
+Após a execução do método, o valor original permaneceu igual:
+
+numero = 10
+
+
+Isso demonstra que a alteração ocorreu apenas localmente.
+
+Assi, aprendi que Java utiliza passagem por valor para tipos primitivos.
+
+O método recebe apenas uma cópia do valor, e não a variável original.
+
+Por isso:
+
+- a variável local pode ser alterada;
+- a variável externa permanece inalterada.
+
+--------------------
 
 
 
