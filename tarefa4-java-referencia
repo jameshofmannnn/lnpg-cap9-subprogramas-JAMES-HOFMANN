@@ -1,0 +1,43 @@
+class Produto {
+
+    String nome;
+    double preco;
+}
+
+
+public class TesteProduto {
+
+
+    public static void aplicarDesconto(Produto p) {
+
+        System.out.println("\nDentro do método:");
+
+        System.out.println("Preço antes do desconto: R$ " + p.preco);
+
+
+        p.preco = p.preco - 50;
+
+        System.out.println("Preço depois do desconto: R$ " + p.preco);
+    }
+
+
+
+    public static void main(String[] args) {
+
+        Produto produto = new Produto();
+
+        produto.nome = "Notebook";
+        produto.preco = 2500;
+
+        System.out.println("Antes da chamada:");
+        System.out.println("Produto: " + produto.nome);
+        System.out.println("Preço: R$ " + produto.preco);
+
+
+        aplicarDesconto(produto);
+
+        System.out.println("\nDepois da chamada:");
+        System.out.println("Produto: " + produto.nome);
+        System.out.println("Preço: R$ " + produto.preco);
+    }
+}
