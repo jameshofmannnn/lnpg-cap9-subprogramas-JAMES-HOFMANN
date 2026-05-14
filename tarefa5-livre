@@ -1,10 +1,10 @@
-# Agenda Simples de Contatos
+# Agenda Simples de Contatos em Python
 
 contatos = []
 
 
 def mostrar_menu():
-    print("\n===== AGENDA =====")
+    print("\n===== AGENDA DE CONTATOS =====")
     print("1 - Adicionar contato")
     print("2 - Listar contatos")
     print("3 - Buscar contato")
